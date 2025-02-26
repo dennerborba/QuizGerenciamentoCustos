@@ -97,7 +97,7 @@ const perguntas = [
       { text: 'Uma reserva para riscos desconhecidos ou imprevistos', isCorrect: true },
       { text: 'O dinheiro economizado no final do projeto', isCorrect: false },
     ]
-  },
+  }
 
 ]
 
@@ -163,6 +163,8 @@ function checkAnswer(isCorrect) {
     setTimeout(displayQuestion, 1500);
   } else {
     document.getElementById("question").textContent = "Quiz Finalizado!"
+    document.getElementById("question").style.fontSize = "3em"
+    document.getElementById("question").classList.remove("certa", "errada")
     document.getElementById("options").innerHTML = ""
   }
 }
